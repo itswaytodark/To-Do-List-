@@ -13,35 +13,46 @@ form.addEventListener('submit' , function(e){
 function add_btn()
 {
     if(todo_Input.value.trim() === "")
-    {
-        todo_Input.placeholder = "Enter a Text First 💀"
-    }
-
-    else
-    {
+        {
+            todo_Input.placeholder = "Enter a Text First 💀"
+        }
         
-        
+        else
+        {
+            
+            
         // This is Todo List
         let task = document.createElement("li")
-        task.className= "todo"
+        task.className="todo" 
         // task.innerHTML = todo_Input.value
+        
         todo_List.appendChild(task)
         
         
         
+        let T = Math.random() * 10;
         
         // This is Cheakbox
         let check_btn = document.createElement("input")
         check_btn.type = "checkbox"
-        // document.createAttribute("for")
-        // check_btn.value = "todo-1"
+        check_btn.setAttribute("id",`todo-${T}`)
         check_btn.className = "checkbox"
         task.appendChild(check_btn)
         
 
-        let span = document.createElement("span")
+
+
+
+
+
+
+
+
+        // span for div
+        let span = document.createElement("label")
         span.innerHTML = todo_Input.value
         span.className= "todo"
+        span.setAttribute("for",`todo-${T}`)
         task.appendChild(span)
 
 

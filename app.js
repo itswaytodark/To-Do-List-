@@ -1,6 +1,8 @@
 const todo_Input = document.getElementById("todo_input")
 const todo_List = document.getElementById("todo_list")
 
+const lable = document.querySelector("label")
+
 const form = document.querySelector("form")
 
 form.addEventListener('submit' , function(e){
@@ -73,7 +75,13 @@ function add_btn()
         {
             todo_List.removeChild(task)
         }
+        
 
+        // edit_btn.addEventListener("click", edit)
+        // function edit()
+        // {
+        //     todo_List.removeChild(lable)
+        // }
     
         todo_Input.value = ""
 
